@@ -40,60 +40,29 @@ body {
 }
 
 /**************************************************************
- *          SKILLS                                            *
+ *          SKILLS & PROJECTS                                 *
  **************************************************************/
 
-.skills {
+.skills, .projects {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
 }
 
-.skills-Row {
+.skills-Row, .projects_Row {
   align-items: center;
 }
 
-.skills img {
+.skills img, .projects img {
   padding: 10px;
   width: 150px;
   height: auto;
 }
 
-/**************************************************************
- *          PROJECTS                                          *
- **************************************************************/
-
-.projects img {
-  align-items: center;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 100px;
-  height: auto;
-}
-
 /* hover effect (blue shadow) */
-
-.projects {
-  padding: 0 6px;
-  width: 100%;
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-}
-
-.projects img:hover {
+ .sklills img:hover, .projects img:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
-
-.projects .desc, .skills .desc{
-  font-weight: bold;
 }
 
 /**************************************************************
@@ -204,13 +173,17 @@ button[type=submit]:hover {
  */
 @media only screen and (max-width: 725px) {
 
-  .projects { 
+  .skills .desc, .projects .desc{
+  	display: none;
+  }
+  .projects, .skills { 
     width: 100%;
   }
-  .skills {
+  .skills, .projects {
     width: 100%;
     flex-direction: column;   /*'skills' will be shown in column format*/
     margin: 6px 0;
+    align-items: center;
   }
   .imageAmit {
     width: 60vw;
